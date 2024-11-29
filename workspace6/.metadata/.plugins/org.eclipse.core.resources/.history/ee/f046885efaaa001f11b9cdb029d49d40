@@ -1,0 +1,5 @@
+-- 1. insert: 테이블에 데이터 추가
+INSERT INTO CUSTOMER(ID , NAME, ADDRESS)
+VALUES(1, '둘리', '인천');
+
+SELECT * FROM CUSTOMER;

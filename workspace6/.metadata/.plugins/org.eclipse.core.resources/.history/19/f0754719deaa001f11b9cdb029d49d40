@@ -1,0 +1,27 @@
+--내가 실행시킬 쿼리문에 커서가 있는상태에서 ctrl+enter를 누르면 쿼리문 실행
+--쿼리문은 대소문자 상관 X
+
+select * from nls_database_parameters where parameter = 'NLS_CHARACTERSET';
+
+--직원 테이블
+CREATE TABLE emp (
+	NO NUMBER,
+	NAME VARCHAR2(20), --20바이트:영문자 기준으로 최대 20자까지 저장가능, 한글은 1자 = 3byte이므로 최대 6글자 저장가능
+	AGE NUMBER
+);
+
+--고객 테이블
+CREATE TABLE customer(
+	id NUMBER PRIMARY KEY, --최대 38자리 까지 지정가능(소수점 포함)
+	name varchar2(20) NOT NULL,
+	address varchar2(100)
+);
+
+--주문 테이블
+CREATE TABLE Orders(
+order_id NUMBER PRIMARY KEY,
+saleman_id NUMBER,
+order_date DATE NOT NULL
+);
+
+DROP TABLE orders;
