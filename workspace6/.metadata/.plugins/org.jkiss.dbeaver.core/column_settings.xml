@@ -33,7 +33,7 @@
 		<column name="Name" visible="true" order="0" width="130"/>
 	</item>
 	<item id="Suggestion/NodeList/OracleTableColumn">
-		<column name="컬럼명" visible="true" order="0" width="79"/>
+		<column name="컬럼명" visible="true" order="0" width="127"/>
 		<column name="#" visible="true" order="1" width="27"/>
 		<column name="Type" visible="true" order="2" width="94"/>
 		<column name="Type Mod" visible="false" order="3" width="100"/>
@@ -42,9 +42,9 @@
 		<column name="Comment" visible="true" order="5" width="68"/>
 	</item>
 	<item id="scriptSelectorViewer">
-		<column name="Script" visible="true" order="0" width="146"/>
-		<column name="Time" visible="true" order="1" width="194"/>
-		<column name="Info" visible="true" order="2" width="79"/>
-		<column name="Folder" visible="true" order="3" width="91"/>
+		<column name="Script" visible="true" order="0" width="166"/>
+		<column name="Time" visible="true" order="1" width="182"/>
+		<column name="Info" visible="true" order="2" width="67"/>
+		<column name="Folder" visible="true" order="3" width="79"/>
 	</item>
 </items>

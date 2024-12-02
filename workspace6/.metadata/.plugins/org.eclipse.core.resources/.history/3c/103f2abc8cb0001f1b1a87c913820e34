@@ -440,9 +440,8 @@ FROM EMPLOYEES;
 
 
 -- ■ 18. EMPLOYEES 테이블에서 부서별로 인원수, 평균 급여, 최저급여, 최고급여, 급여의 합을 구하여 출력하라. ■
-SELECT DEPARTMENT_ID,COUNT(*) AS EMPLOYEE_COUNT, AVG(SALARY) AS AVG_SALARY, MIN(SALARY) AS MIN_SALARY,MAX(SALARY) AS MAX_SALARY,SUM(SALARY) AS TOTAL_SALARY
-FROM EMPLOYEES
-GROUP BY DEPARTMENT_ID; 
+SELECT 
+FROM EMPLOYEESk
 
 
 -- ■ 19. EMPLOYEES 테이블에서 각 부서별로 인원수, 급여의 평균, 최저 급여, 최고 급여, 급여의 합을 구하여 급여의 합이 많은 순으로 출력하여라. ■
