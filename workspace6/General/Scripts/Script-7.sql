@@ -628,27 +628,79 @@ ON EMP.DEPTNO = DEPT.DEPTNO;
 
 
 -- ■ 9. 업무가 MANAGER인 사원의 정볼르 이름, 업무, 부서명, 근무지 순으로 출력하시오. ( emp, dept) ■
+SELECT * FROM EMP;
+SELECT * FROM DEPT;
 
+
+SELECT EMP.ENAME, EMP.JOB, DEPT.DNAME, DEPT.LOC
+FROM EMP
+INNER JOIN DEPT ON EMP.DEPTNO = DEPT.DEPTNO
+WHERE JOB = 'MANAGER';
 
 -- ■ 10. 커미션을 받고 급여가 1,600이상인 사원의 사원이름, 부서명, 근무지를 출력하시오. ■
+SELECT * FROM EMP;
+
+SELECT EMP.ENAME , DEPT.DNAME, DEPT.LOC
+FROM EMP
+INNRT JOIN DEPT ON EMP.DEPTNO = DEPT.DEPTNO
+WHERE EMP.SAL >=1600
+AND EMP.COMM IS NOT NULL;
 
 
 -- ■ 11. 근무지가 CHICAGO인 모든 사원의 이름, 업무, 부서번호 및 부서이름을 표시하시오. ■
+SELECT * FROM DEPT;
+
+SELECT EMP.ENAME, EMP.JOB, EMP.DEPTNO, DEPT.DNAME
+FROM EMP
+INNER JOIN DEPT ON EMP.DEPTNO = DEPT.DEPTNO
+WHERE LOC = 'CHICAGO';
 
 
 -- ■ 12. 근무지별로 근무하는 사원의 수가 5명 이하인 경우, 인원이 적은 도시순으로 정렬하시오. (근무 인원이 0 명인 곳도 표시 ) ■
+SELECT * FROM EMP;
+
+SELECT DEPT.LOC, COUNT(EMP.EMPNO) AS EMP_COUNT
+FROM EMP
+RIGHT JOIN DEPT ON EMP.DEPTNO = DEPT.DEPTNO
+GROUP BY DEPT.LOC
+HAVING COUNT(EMP.EMPNO) <= 5
+ORDER BY EMP_COUNT ASC;
+
 
 
 -- ■ 13. 사원의 이름 및 사원 번호를 관리자의 이름과 관리자 번호와 함께 표시하고 각각의 열레이블은 employee, emp#, manager, mag#로 지정하시오. ■
 
+SELECT EMP.ENAME AS employee, EMP.EMPNO AS emp#, MGR.ENAME AS manager, MGR.EMPNO AS mag#
+FROM EMP 
+LEFT JOIN EMP MGR ON EMP.MGR = MGR.EMPNO;
+
+
 
 -- ■ 14. 관리자보다 먼저 입사한 모든 사원의 이름 및 입사일을 관리자의 이름 및 입사일과 함꼐 표시하고 열 레이블을 각각 employee, emp hired, manger, mgr hired로 지정 ■
+SELECT EMP.ENAME AS employee , EMP.HIREDATE AS emp hired , MGR.ENAME AS manager, MGR.HIREDATE AS mgr hired
+FROM EMP
+LEFT JOIN EMP MGR ON EMP.MGR = MGR.EMPNO
+WHERE EMP.HIREDATE < MGR.HIREDATE;
+
 
 
 -- ■ 15. SMITH 사원과 동일한 부서에서 근무하고 사원번호는 같지 않은 모든 사원을 표시하도록 질의를 작성하고 동일한 부서에서 근무하는 사원은 colleague로 표시하시오.(부서번호, 사원이름,동료 순으로 오름차순 정렬) ■
+SELECT EMP.DEPTNO, EMP.ENAME, 'colleague' AS colleague
+FROM EMP
+WHERE EMP.DEPTNO = (SELECT DEPTNO FROM EMP WHERE ENAME = 'SMITH')
+AND EMP.EMPNO != (SELECT EMPNO FROM EMP WHERE ENAME = 'SMITH')
+ORDER BY EMP.DEPTNO, EMP.ENAME;
+
 
 
 -- ■ 16. 10번부서에서 근무하는 사원들의 부서번호, 부서이름, 사원이름,월급,급여등급을 출력하시오. ■
+
+
+
+
+
+
+
 
 
 
@@ -659,71 +711,137 @@ ON EMP.DEPTNO = DEPT.DEPTNO;
 
 
 -- ■ 1. BLAKE와 같은 부서에 있는 사원들의 이름과 입사일을 구하는데 BLAKE는 제외하고 출력하시오.(BLAKE가 여러명일 수 있음) ■
+SELECT * FROM EMP;
+
+SELECT ENAME,HIREDATE
+FROM EMP
+WHERE DEPTNO = (SELECT ENAME FROM EMP WHERE ENAME = 'BLAKE')
+AND ENAME !='BLACk';
 
 
 -- ■ 2. (평균급여보다 많은 급여)를 받는 사원들의 사원번호, 이름, 월급을 출력하는데 (월급이 높은 사람순으로 출력 하시오.) ■
+SELECT * FROM EMP;
+
+SELECT EMPNO, ENAME, SAL
+FROM EMP
+WHERE SAL > (SELECT AVG(SAL) FROM EMP)
+ORDER BY SAL DESC;
 
 
 -- ■ 3. (10번부서에서 급여를 가장 적게 받는 사원)과 동일한 급여를 받는 사원의 이름을 출력하시오. ■
+
+SELECT ENAME
+FROM EMP
+WHERE SAL = (SELECT MIN(SAL) FROM EMP WHERE DEPTNO = 10);
 
 
 -- ■ 4. 사원수가 3명이 넘는 부서의 부서명과 사원수를 출력하시오. ■
 
 
+SELECT DEPT.DNAME , COUNT(EMP.EMPNO)
+FROM EMP
+INNER JOIN DEPT ON EMP.DEPTNO = DEPT.DEPTNO
+GROUP BY DEPT.DEPTNO, DEPT.DNAME
+HAVING COUNT(EMP.EMPNO) > 3;
+
+
 -- ■ 5. 사원번호가 7844인 사원보다 빨리 입사한 사원의 이름과 입사일을 출력하시오. ■
+SELECT * FROM EMP;
+
+SELECT ENAME, HIREDATE
+FROM EMP
+WHERE HIREDATE < (SELECT HIREDATE FROM EMP WHERE EMPNO = 7844);
 
 
 -- ■ 6. 직속상사(MGR)가 KING인 모든 사원의 이름과 급여를 출력하시오. ■
+SELECT ENAME, SAL
+FROM EMP
+WHERE MGR = 'king';
 
 
 -- ■ 7. 20번 부서에서 가장 급여를 많이 받는 사원과 동일한 급여를 받는 사원의 이름과 부서명, 급여, 급여등급을 출력하시오. (emp, dept, salgrade) ■
 
 
+
 -- ■ 8. 총급여(sal+comm)가 평균 급여보다 많은 급여를 받는 사람의 부서번호, 이름, 총급여, 커미션을 출력하시오. ■
+
+
 
 
 -- ■ 9. CHICAGO 지역에서 근무하는 사원의 평균 급여보다 높은 급여를 받는 사원의 이름과 급여, 지역명을 출력하시오. ■
 
 
+
+
 -- ■ 10. 업무가 SALESMAN인 직원이 2명 이상인 부서의 이름, 근무하는 사원의 이름, 업무를 출력 하시오.(컬럼명은 부서명, 사원명, 업무로 출력) ■
+
+
 
 
 -- ■ 11. 커미션이 없는 사원들 중 월급이 가장 높은 사원의 이름과 급여등급을 출력하시오. ■
 
+
+
 -- ■ 12. SMITH의 관리자(MGR)의 이름과 부서명, 근무지역을 출력하시오. ■
+
+
 
 
 
 -- ■ 1. EMPLOYEES 테이블에서 Kochhar 의 급여보다 많은 사원의 정보를 사원번호, 이름, 담당업무, 급여를 출력하라. ■
 
 
+
+
+
 -- ■ 2. EMPLOYEES 테이블에서 급여의 평균보다 적은 사원의 정보를 사원번호, 이름, 담당업무, 급여, 부서번호를 출력하여라 ■
+
+
 
 
 -- ■ 3. EMPLOYEES 테이블에서 100번 부서의 최소 급여보다 최소 급여가 많은 다른 모든 부서를 출력하라. ■
 
 
+
+
 -- ■ 4. 업무별로 최소 급여를 받는 사원의 정보를 사원번호, 이름 업무, 부서번호를 출력하여라. 단 업무별로 정렬하여라. ■
+
+
 
 
 -- ■ 5. EMPLOYEES 과 DEPARTMENTS 테이블에서 업무가 SA_MAN 사원의 정보를 이름, 업무, 부서명, 근무지를 출력하라. ■
 
+
+
+
 -- ■ 6. EMPLOYEES 테이블에서 가장 많은 사원을 갖는 MANAGER의 사원번호를 출력하라. ■
+
+
 
 
 -- ■ 7. EMPLOYEES 테이블에서 가장 많은 사원이속해 있는 부서번호와 사원수를 출력하라. ■
 
 
+
+
 -- ■ 8. EMPLOYEES 테이블에서 사원번호가 123인 사원의 직업과 같고 사원번호가 192인 사원의 급여(SAL)보다 많은 사원의 사원번호, 이름, 직업, 급여를 출력하라. ■
+
+
 
 
 -- ■ 9. 직업(JOB)별로 최소 급여를 받는 사원의 정보를 사원번호, 이름, 업무, 부서명을 출력하라. -- 조건 1 : 직업별로 내림차순 정렬 ■
 
 
+
+
 -- ■ 10. EMPLOYEES 테이블에서 50번 부서의 최소 급여를 받는 사원 보다 많은 급여를 받는 사원의 정보를 사원번호, 이름, 업무, 입사일자, 급여, 부서번호를 출력하라 단 50번은 제외 ■
 
 
+
+
 -- ■ 11. EMPLOYEES 테이블에서 50번 부서의 최고 급여를 받는 사원 보다 많은 급여를 받는 사원의 정보를 사원번호, 이름, 업무, 입사일자, 급여, 부서번호를 출력하라 단 50번은 제외 ■
+
+
 
 
 
