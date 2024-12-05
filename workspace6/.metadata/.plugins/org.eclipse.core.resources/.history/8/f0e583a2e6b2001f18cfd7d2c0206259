@@ -29,19 +29,16 @@ SELECT * FROM EMP_DEPTNO;
    
   
   -- ■ 2. EMP_DEPTNO 테이블에 ETC COLUMN을 추가하라. 단 자료형은 VARCHAR2(50) 사용하라. ■
-  
  	 SELECT * FROM EMP_DEPTNO;
   
   	ALTER TABLE EMP_DEPTNO ADD ETC VARCHAR2(50);
  
  
   -- ■ 3. EMP_DEPTNO 테이블에 ETC COLUMN을 수정하라. 자료형은 VARCHAR2(15)로 하라. ■
-  
  	 ALTER TABLE EMP_DEPTNO MODIFY ETC VARCHAR2(15);
 
 
 -- ■ 4. EMP_DEPTNO 테이블에 있는 ETC을 삭제하고 확인하라. ■
- 	
   	ALTER TABLE EMP_DEPTNO DROP COLUMN ETC;
 
 
@@ -51,7 +48,6 @@ SELECT * FROM EMP_DEPTNO;
  
   DESCRIBE EMP_DEPT;
 -- ■ 6. EMP_DEPT 테이블을 삭제하라. ■
- 
     DROP TABLE  EMP_DEPT;
   
    
@@ -120,7 +116,6 @@ SELECT SALARY +300 AS "SALARY+300"
 FROM EMPLOYEES;
 
 -- ■ 5. EMP 테이블에서 사원번호, 이름, 급여, 보너스, 보너스 금액을 출력여라 (참고로 보너스는 월급 + (월급 * 커미션)) 
-
 SELECT * FROM EMP;
 
 SELECT EMPNO, ENAME, SAL, SAL+(SAL*COMM) AS "BONUS"
@@ -128,7 +123,6 @@ FROM EMP;
 
 
 -- ■ 6. EMPLOYEES 테이블에서 LSAT_NAME을 이름으로 SALARY을 급여로 출력하여라. 
-
 SELECT * FROM EMPLOYEES; 
 
 SELECT LAST_NAME AS '이름' AND SALARY AS '급여'
@@ -136,24 +130,20 @@ FROM EMPLOYEES;
 
 
 -- ■ 7. EMPLOYEES 테이블에서 LAST_NAME을 Name으로 SALARY*12를 Annual Salary(연봉)로 출력하여라.
-
 SELECT LAST_NAME AS 'Name' , SALARY*12 AS "Annual Salary"
 FROM EMPLOYEES;
 
 
 -- ■ 8. EMPLOYEES 테이블에서 이름과 업무를 연결하여 출력하여라. 
-
 SELECT LAST_NAME || '-' || JOB_ID AS "Name and Job"
 FROM EMPLOYEES;
 
 -- ■ 9. EMPLOYEES 테이블에서 이름과 업무를 "KING is a PRESIDENT" 형식으로 출력하여라. 
-
 SELECT LAST_NAME || 'is a' || JOB_ID AS "KING IS A PRESIDENT"
 FROM EMPLOYEES;
 
 
 -- ■ 10. EMPLOYEES 테이블에서 이름과 연봉을 "KING: 1 Year salary = 60000" 형식으로 출력하여라. 
-
 SELECT LAST_NAME || ': 1 Year salary ' || SALARY*12 AS "KING : 1 Year salary = 60000"
 FROM EMPLOYEES;
 
@@ -170,7 +160,6 @@ FROM EMPLOYEES;
 
 
 -- ■ 1. EMPLOYEES 테이블에서 급여가 3000이상인 사원읜 정보를 사원번호, 이름, 담당업무, 급여를 출력하라. ■
-
 SELECT EMPLOYEE_ID,LAST_NAME, JOB_ID, SALARY
 FROM EMPLOYEES
 WHERE SALARY >= 3000;
@@ -205,9 +194,7 @@ FROM EMPLOYEES
 WHERE EMPLOYEE_ID IN (145,152,203);
 
 -- ■ 6. EMPLOYEES 테이블에서 입사일자가 05년도에 입사한 사원의 정보를 사원번호, 성명, 담당업무, 급여, 입사일자, 부서번호를 출력하라. ■
-
 SELECT * FROM EMPLOYEES;
-
 SELECT EMPLOYEE_ID,LAST_NAME,JOB_ID,SALARY,HIRE_DATE,DEPARTMENT_ID
 FROM EMPLOYEES
 WHERE EXRACT( YEAR FROM HIRE_DATE) = '2005';
@@ -221,34 +208,29 @@ WHERE BONUS IS NULL;
 
 
 -- ■ 8. EMPLOYEES 테이블에서 급여가 1100이상이고 JOB이 ST_MAN 인 사원의 정보를 사원번호, 성명, 담당업무, 급여, 입사일자, 부서번호를 출력하라. ■
-
 SELECT EMPLOYEE_ID,LAST_NAME,JOB_ID,SALARY,HIRE_DATE,DEPARTMENT_ID
 FROM EMPLOYEES
 WHERE SALARY >=1100 AND JOB_ID = 'ST_MAN';
 
 
 -- ■ 9. EMPLOYEES 테이블에서 급여가 10000이상이거나 JOB이 Manager 인 사원의 정보를 사원번호, 성명, 담당업무, 급여, 입사일자, 부서번호를 출력하라. ■
-
 SELECT EMPLOYEE_ID,LAST_NAME,JOB_ID,SALARY,HIRE_DATE,DEPARTMENT_ID
 FROM EMPLOYEES
 WHERE SALARY >=10000 OR JOB_ID = 'Manager';
 
 
 -- ■ 10. EMPLOYEES 테이블에서 JOB이 ST_MAN, SA_MAN, SA_REP가 아닌 사원의 정보를 사원번호, 성명, 담당업무, 급여, 부서번호를 출력하라. ■
-
 SELECT EMPLOYEE_ID,LAST_NAME,JOB_ID,SALARY,DEPARTMENT_ID
 FROM EMPLOYEES
 WHERE JOB_ID = NOT IN ('ST_MAN', 'SA_MAN', 'SA_REP');
 
 
 -- ■ 11. 업무가 PRESIDENT(AD_PRES) 이고 급여가 12000이상이거나 업무가 SA_MAN인 사원의 정보를 사원번호, 이름, 업무, 급여를 출력하라. ■
-
 SELECT EMPLOYEE_ID,LAST_NAME,JOB_ID,SALARY 
 FROM EMPLOYEES
 WHERE JOB_ID = 'AD_PRES' AND SALARY >=12000 OR JOB_ID ='SA_MAN';
 
 -- ■ 12. 업무가 PRESIDENT(AD_PRES) 또는 SA_MAN 이고 급여가 12000이상이거나 사원의 정보를 사원번호, 이름, 업무, 급여를 출력하라. ■
-
 SELECT EMPLOYEE_ID,LAST_NAME,JOB_ID,SALARY 
 FROM EMPLOYEES
 WHERE (JOB_ID = 'AD_PRES' OR JOB_ID='SA_MAN') AND SALARY >=12000;
@@ -260,9 +242,7 @@ WHERE (JOB_ID = 'AD_PRES' OR JOB_ID='SA_MAN') AND SALARY >=12000;
 
 
 -- ■ 1. emp 테이블에서 사원번호가 7698 인 사원의 이름, 업무, 급여를 출력하시오. ■
-
 SELECT * FROM EMP;
-
 
 SELECT ENAME,JOB,SAL
 FROM EMP
@@ -853,19 +833,12 @@ AND MANAGER.DEPTNO = DEPT.DEPTNO;
 
 -- ■ 1. EMPLOYEES 테이블에서 Kochhar 의 급여보다 많은 사원의 정보를 사원번호, 이름, 담당업무, 급여를 출력하라. ■
 
-SELECT * FROM EMPLOYEES;
 
-SELECT EMPLOYEE_ID, LAST_NAME,JOB_ID,SALARY
-FROM EMPLOYEES
-WHERE SALARY > (SELECT SALARY FROM EMP WHERE LAST_NAME = 'Kochhar');
 
 
 
 -- ■ 2. EMPLOYEES 테이블에서 급여의 평균보다 적은 사원의 정보를 사원번호, 이름, 담당업무, 급여, 부서번호를 출력하여라 ■
 
-SELECT EMPLOYEE_ID,LASt_NAME,JOB_ID,DEPARTMENT_ID
-FROM EMPLOYEES
-WHERE SALARY < (SELECT AVG(SALARY) FROM EMPLOYEES);
 
 
 
