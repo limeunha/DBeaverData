@@ -1,3 +1,5 @@
+connection.closeOnSleep=true
+connections.useWinTrustStoreType=false
 dialog.default.folder=C\:\\Users\\EZENIC-038\\AppData\\Roaming\\DBeaverData\\workspace6\\General\\Scripts
 driver.selector.orderBy=score
 eclipse.preferences.version=1
@@ -6,5 +8,5 @@ org.jkiss.dbeaver.core.confirm.drop_sql=always
 org.jkiss.dbeaver.core.confirm.exit=always
 sample.database.canceled=true
 tipOfTheDayInitializer.notFirstRun=true
-ui.auto.update.check.time=1733362634330
+ui.auto.update.check.time=1733444514980
 ui.show.tip.of.the.day.on.startup=true
