@@ -14,5 +14,4 @@ drop DATABASE test;
 
 
 select * from users;
-
 select * from comments;

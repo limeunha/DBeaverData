@@ -15,4 +15,4 @@ drop DATABASE test;
 
 select * from users;
 
-select * from comments;
+DELETE FROM users WHERE id = 1;

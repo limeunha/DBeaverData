@@ -11,8 +11,3 @@ use test;
 
 -- 데이터 베이스 삭제
 drop DATABASE test;
-
-
-select * from users;
-
-select * from comments;
