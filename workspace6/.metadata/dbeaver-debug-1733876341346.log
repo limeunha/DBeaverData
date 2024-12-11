@@ -1,12 +1,12 @@
-2024-12-06 17:57:17.271 - DBeaver 24.2.5.202411171748 is starting
-2024-12-06 17:57:17.271 - OS: Windows 10 10.0 (amd64)
-2024-12-06 17:57:17.272 - Java version: 17.0.6 by Eclipse Adoptium (64bit)
-2024-12-06 17:57:17.272 - Install path: 'C:\Users\EZENIC-038\AppData\Local\DBeaver'
-2024-12-06 17:57:17.272 - Instance path: 'file:/C:/Users/EZENIC-038/AppData/Roaming/DBeaverData/workspace6/'
-2024-12-06 17:57:17.274 - Memory available 64Mb/1024Mb
-2024-12-06 17:57:17.282 - Create display
-2024-12-06 17:57:17.393 - Starting instance server at http://localhost:56295
-2024-12-06 17:57:17.408 - Run workbench
+2024-12-09 18:15:12.046 - DBeaver 24.2.5.202411171748 is starting
+2024-12-09 18:15:12.047 - OS: Windows 10 10.0 (amd64)
+2024-12-09 18:15:12.048 - Java version: 17.0.6 by Eclipse Adoptium (64bit)
+2024-12-09 18:15:12.048 - Install path: 'C:\Users\EZENIC-038\AppData\Local\DBeaver'
+2024-12-09 18:15:12.048 - Instance path: 'file:/C:/Users/EZENIC-038/AppData/Roaming/DBeaverData/workspace6/'
+2024-12-09 18:15:12.050 - Memory available 64Mb/1024Mb
+2024-12-09 18:15:12.059 - Create display
+2024-12-09 18:15:12.187 - Starting instance server at http://localhost:54183
+2024-12-09 18:15:12.194 - Run workbench
 > Start Eclipse e4 Workbench SWT [org.eclipse.e4.ui.workbench.swt 0.17.500.v20240807-0911]
 > Start Eclipse Application Services [org.eclipse.e4.core.services 2.4.400.v20240413-1529]
 > Start Eclipse UI Application Services [org.eclipse.e4.ui.services 1.6.300.v20231201-1637]
@@ -21,17 +21,17 @@
 > Start Eclipse CSS SWT Support [org.eclipse.e4.ui.css.swt 0.15.400.v20240321-1245]
 > Start Default Text Editor [org.eclipse.ui.editors 3.18.0.v20240807-0735]
 > Start Text Editor Framework [org.eclipse.ui.workbench.texteditor 3.18.0.v20240819-1419]
-2024-12-06 17:57:18.708 - Configure workbench window
+2024-12-09 18:15:13.494 - Configure workbench window
 > Start DBeaver SQL Model [org.jkiss.dbeaver.model.sql 1.0.133.202411171748]
-2024-12-06 17:57:18.840 - Total database drivers: 120 (120)
+2024-12-09 18:15:13.637 - Total database drivers: 120 (120)
 > Start Help System Core [org.eclipse.help 3.10.400.v20240415-0528]
-2024-12-06 17:57:18.934 - Create actions
-2024-12-06 17:57:18.949 - Disable Eclipse action set 'org.eclipse.ui.edit.text.actionSet.annotationNavigation'
-2024-12-06 17:57:18.949 - Disable Eclipse action set 'org.eclipse.ui.WorkingSetActionSet'
-2024-12-06 17:57:18.949 - Disable Eclipse action set 'org.eclipse.ui.actionSet.openFiles'
-2024-12-06 17:57:18.949 - Create workbench actions
-2024-12-06 17:57:19.295 - Initialize workbench window
-2024-12-06 17:57:19.311 - Finish initialization
+2024-12-09 18:15:13.752 - Create actions
+2024-12-09 18:15:13.758 - Disable Eclipse action set 'org.eclipse.ui.edit.text.actionSet.annotationNavigation'
+2024-12-09 18:15:13.759 - Disable Eclipse action set 'org.eclipse.ui.WorkingSetActionSet'
+2024-12-09 18:15:13.759 - Disable Eclipse action set 'org.eclipse.ui.actionSet.openFiles'
+2024-12-09 18:15:13.759 - Create workbench actions
+2024-12-09 18:15:14.099 - Initialize workbench window
+2024-12-09 18:15:14.114 - Finish initialization
 > Start DBeaver UI Editors - Data [org.jkiss.dbeaver.ui.editors.data 1.0.143.202411171748]
 Warning: NLS unused message: actions_navigator__objects in: org.jkiss.dbeaver.ui.editors.sql.internal.SQLEditorMessages
 > Start DBeaver UI Editors - SQL [org.jkiss.dbeaver.ui.editors.sql 1.0.143.202411171748]
@@ -54,24 +54,22 @@ Warning: NLS unused message: actions_navigator__objects in: org.jkiss.dbeaver.ui
 > Start DBeaver Tasks - Native Tools UI [org.jkiss.dbeaver.tasks.native.ui 1.0.121.202411171748]
 > Start DBeaver Oracle UI [org.jkiss.dbeaver.ext.oracle.ui 1.0.130.202411171748]
 > Start DBeaver Tasks - General UI [org.jkiss.dbeaver.tasks.ui 1.0.121.202411171748]
-2024-12-06 17:57:22.031 - Connect with 'localhost' (oracle_thin-19360d14836-3ec32adf5aee7f3e)
-2024-12-06 17:57:22.072 - Execution context opened (localhost; Main; 0)
+2024-12-09 18:15:16.696 - Connect with 'localhost' (oracle_thin-19360d14836-3ec32adf5aee7f3e)
+2024-12-09 18:15:16.733 - Execution context opened (localhost; Main; 0)
 > Start DBeaver SQL Language Semantic Model [org.jkiss.dbeaver.model.lsm 1.0.38.202411171748]
-2024-12-06 17:57:22.821 - Execution context opened (localhost; Metadata; 1)
-2024-12-06 17:57:22.942 - Connected (oracle_thin-19360d14836-3ec32adf5aee7f3e, Oracle JDBC driver [23.2.0.0.0])
-2024-12-06 17:57:22.944 - Execution context opened (localhost; SQLEditor <Script-7.sql>; 2)
-2024-12-06 17:57:35.815 - Execution context closed (localhost, 2)
-2024-12-06 17:57:37.776 - Connect with 'localhost 2' (mysql8-1939a18f57e-4f6b7c7b789d4747)
+2024-12-09 18:15:17.441 - Execution context opened (localhost; Metadata; 1)
+2024-12-09 18:15:17.623 - Connected (oracle_thin-19360d14836-3ec32adf5aee7f3e, Oracle JDBC driver [23.2.0.0.0])
 > Start DBeaver MySQL Support [org.jkiss.dbeaver.ext.mysql 2.1.228.202411171748]
-2024-12-06 17:57:37.787 - Execution context opened (localhost 2; Main; 3)
-> Start DBeaver GIS Support [org.jkiss.dbeaver.data.gis 1.0.167.202411171748]
-2024-12-06 17:57:37.971 - Execution context opened (localhost 2; Metadata; 4)
-2024-12-06 17:57:38.038 - Connected (mysql8-1939a18f57e-4f6b7c7b789d4747, MySQL Connector/J [mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)])
-2024-12-06 17:57:41.608 - Execution context opened (localhost 2; SQLEditor <Script-10.sql>; 5)
 > Start DBeaver MySQL UI Support [org.jkiss.dbeaver.ext.mysql.ui 1.0.135.202411171748]
-2024-12-06 17:58:47.731 - Execution context closed (localhost 2, 5)
-2024-12-06 17:58:48.037 - Dispose navigator model
-2024-12-06 17:58:48.135 - DBeaver is stopping
-2024-12-06 17:58:48.136 - Stop instance server
-2024-12-06 17:58:49.147 - Instance server has been stopped
-2024-12-06 17:58:49.148 - DBeaver shutdown completed
+2024-12-09 18:15:33.397 - Connect with 'localhost 2' (mysql8-1939a18f57e-4f6b7c7b789d4747)
+2024-12-09 18:15:33.405 - Execution context opened (localhost 2; Main; 2)
+> Start DBeaver GIS Support [org.jkiss.dbeaver.data.gis 1.0.167.202411171748]
+2024-12-09 18:15:33.600 - Execution context opened (localhost 2; Metadata; 3)
+2024-12-09 18:15:33.667 - Connected (mysql8-1939a18f57e-4f6b7c7b789d4747, MySQL Connector/J [mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)])
+2024-12-09 18:15:33.674 - Execution context opened (localhost 2; SQLEditor <Script-10.sql>; 4)
+2024-12-09 18:15:37.453 - Execution context closed (localhost 2, 4)
+2024-12-09 18:15:37.710 - Dispose navigator model
+2024-12-09 18:15:37.804 - DBeaver is stopping
+2024-12-09 18:15:37.805 - Stop instance server
+2024-12-09 18:15:38.813 - Instance server has been stopped
+2024-12-09 18:15:38.813 - DBeaver shutdown completed
