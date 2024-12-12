@@ -14928,3 +14928,148 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.ui 2 2 2024-12-12 09:19:30.464
 !MESSAGE Invalid preference category path: org.eclipse.debug.ui.ConsolePreferencePage (bundle: org.eclipse.ui.console, page: org.eclipse.ui.internal.console.ansi.preferences.AnsiConsolePreferencePage)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-12-12 18:11:07.340
+!MESSAGE Operation failed. Retry count remains = 1
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-12-12 18:11:07.340
+!MESSAGE 
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2024-12-12 18:11:07.340
+!MESSAGE SQL Error [08S01]: The last packet successfully received from the server was 30,626,510 milliseconds ago. The last packet sent successfully to the server was 30,626,511 milliseconds ago. is longer than the server configured value of 'interactive_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+!STACK 0
+org.jkiss.dbeaver.DBDatabaseException: SQL Error [08S01]: The last packet successfully received from the server was 30,626,510 milliseconds ago. The last packet sent successfully to the server was 30,626,511 milliseconds ago. is longer than the server configured value of 'interactive_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at org.jkiss.dbeaver.ext.mysql.model.MySQLCatalog.getDatabaseSize(MySQLCatalog.java:285)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.jkiss.dbeaver.runtime.properties.ObjectPropertyDescriptor.lambda$1(ObjectPropertyDescriptor.java:431)
+	at org.jkiss.dbeaver.runtime.properties.ObjectPropertyDescriptor.lambda$2(ObjectPropertyDescriptor.java:450)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.runtime.properties.ObjectPropertyDescriptor.readValue(ObjectPropertyDescriptor.java:448)
+	at org.jkiss.dbeaver.runtime.properties.PropertySourceAbstract.getPropertyValue(PropertySourceAbstract.java:224)
+	at org.jkiss.dbeaver.runtime.properties.PropertySourceAbstract.getPropertyValue(PropertySourceAbstract.java:173)
+	at org.jkiss.dbeaver.ui.editors.entity.properties.TabbedFolderPageForm$6.evaluate(TabbedFolderPageForm.java:382)
+	at org.jkiss.dbeaver.ui.editors.entity.properties.TabbedFolderPageForm$6.evaluate(TabbedFolderPageForm.java:1)
+	at org.jkiss.dbeaver.ui.LoadingJob.run(LoadingJob.java:88)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: The last packet successfully received from the server was 30,626,510 milliseconds ago. The last packet sent successfully to the server was 30,626,511 milliseconds ago. is longer than the server configured value of 'interactive_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:968)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCPreparedStatementImpl.executeQuery(JDBCPreparedStatementImpl.java:233)
+	at org.jkiss.dbeaver.ext.mysql.model.MySQLCatalog.getDatabaseSize(MySQLCatalog.java:276)
+	... 15 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 30,626,510 milliseconds ago. The last packet sent successfully to the server was 30,626,511 milliseconds ago. is longer than the server configured value of 'interactive_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:629)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:684)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:1050)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:660)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:889)
+	... 18 more
+Caused by: java.net.SocketException: 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.write(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(Unknown Source)
+	at java.base/java.net.Socket$SocketOutputStream.write(Unknown Source)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+	at java.base/java.io.BufferedOutputStream.flush(Unknown Source)
+	at com.mysql.cj.protocol.a.SimplePacketSender.send(SimplePacketSender.java:57)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketSender.send(TimeTrackingPacketSender.java:52)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:620)
+	... 22 more
+!SUBENTRY 3 org.jkiss.dbeaver.model 4 0 2024-12-12 18:11:07.341
+!MESSAGE The last packet successfully received from the server was 30,626,510 milliseconds ago. The last packet sent successfully to the server was 30,626,511 milliseconds ago. is longer than the server configured value of 'interactive_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+!STACK 0
+com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 30,626,510 milliseconds ago. The last packet sent successfully to the server was 30,626,511 milliseconds ago. is longer than the server configured value of 'interactive_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:629)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:684)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:1050)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:660)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:889)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:968)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCPreparedStatementImpl.executeQuery(JDBCPreparedStatementImpl.java:233)
+	at org.jkiss.dbeaver.ext.mysql.model.MySQLCatalog.getDatabaseSize(MySQLCatalog.java:276)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.jkiss.dbeaver.runtime.properties.ObjectPropertyDescriptor.lambda$1(ObjectPropertyDescriptor.java:431)
+	at org.jkiss.dbeaver.runtime.properties.ObjectPropertyDescriptor.lambda$2(ObjectPropertyDescriptor.java:450)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.runtime.properties.ObjectPropertyDescriptor.readValue(ObjectPropertyDescriptor.java:448)
+	at org.jkiss.dbeaver.runtime.properties.PropertySourceAbstract.getPropertyValue(PropertySourceAbstract.java:224)
+	at org.jkiss.dbeaver.runtime.properties.PropertySourceAbstract.getPropertyValue(PropertySourceAbstract.java:173)
+	at org.jkiss.dbeaver.ui.editors.entity.properties.TabbedFolderPageForm$6.evaluate(TabbedFolderPageForm.java:382)
+	at org.jkiss.dbeaver.ui.editors.entity.properties.TabbedFolderPageForm$6.evaluate(TabbedFolderPageForm.java:1)
+	at org.jkiss.dbeaver.ui.LoadingJob.run(LoadingJob.java:88)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketException: 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.write(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(Unknown Source)
+	at java.base/java.net.Socket$SocketOutputStream.write(Unknown Source)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+	at java.base/java.io.BufferedOutputStream.flush(Unknown Source)
+	at com.mysql.cj.protocol.a.SimplePacketSender.send(SimplePacketSender.java:57)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketSender.send(TimeTrackingPacketSender.java:52)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:620)
+	... 22 more
+!SUBENTRY 4 org.jkiss.dbeaver.model 4 0 2024-12-12 18:11:07.341
+!MESSAGE 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+!STACK 0
+java.net.SocketException: 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.write(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(Unknown Source)
+	at java.base/java.net.Socket$SocketOutputStream.write(Unknown Source)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+	at java.base/java.io.BufferedOutputStream.flush(Unknown Source)
+	at com.mysql.cj.protocol.a.SimplePacketSender.send(SimplePacketSender.java:57)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketSender.send(TimeTrackingPacketSender.java:52)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:620)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:684)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:1050)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:660)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:889)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:968)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCPreparedStatementImpl.executeQuery(JDBCPreparedStatementImpl.java:233)
+	at org.jkiss.dbeaver.ext.mysql.model.MySQLCatalog.getDatabaseSize(MySQLCatalog.java:276)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.jkiss.dbeaver.runtime.properties.ObjectPropertyDescriptor.lambda$1(ObjectPropertyDescriptor.java:431)
+	at org.jkiss.dbeaver.runtime.properties.ObjectPropertyDescriptor.lambda$2(ObjectPropertyDescriptor.java:450)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.runtime.properties.ObjectPropertyDescriptor.readValue(ObjectPropertyDescriptor.java:448)
+	at org.jkiss.dbeaver.runtime.properties.PropertySourceAbstract.getPropertyValue(PropertySourceAbstract.java:224)
+	at org.jkiss.dbeaver.runtime.properties.PropertySourceAbstract.getPropertyValue(PropertySourceAbstract.java:173)
+	at org.jkiss.dbeaver.ui.editors.entity.properties.TabbedFolderPageForm$6.evaluate(TabbedFolderPageForm.java:382)
+	at org.jkiss.dbeaver.ui.editors.entity.properties.TabbedFolderPageForm$6.evaluate(TabbedFolderPageForm.java:1)
+	at org.jkiss.dbeaver.ui.LoadingJob.run(LoadingJob.java:88)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2024-12-12 18:11:07.349
+!MESSAGE Task end when no tasks are running

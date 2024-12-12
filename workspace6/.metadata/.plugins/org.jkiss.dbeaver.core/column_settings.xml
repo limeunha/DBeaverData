@@ -6,6 +6,14 @@
 		<column name="Origin" visible="true" order="2" width="100"/>
 		<column name="드라이버 유형" visible="true" order="3" width="100"/>
 	</item>
+	<item id="NodeList/MySQLTable">
+		<column name="테이블명" visible="true" order="0" width="100"/>
+		<column name="Engine" visible="true" order="1" width="100"/>
+		<column name="Auto Increment" visible="true" order="2" width="100"/>
+		<column name="Data Length" visible="true" order="3" width="100"/>
+		<column name="Partitioned" visible="true" order="4" width="100"/>
+		<column name="Description" visible="true" order="5" width="100"/>
+	</item>
 	<item id="NodeList/OracleSchema">
 		<column name="Name" visible="true" order="0" width="130"/>
 	</item>
