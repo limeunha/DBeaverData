@@ -71,3 +71,8 @@ Warning: NLS unused message: actions_navigator__objects in: org.jkiss.dbeaver.ui
 2024-12-17 12:49:59.538 - Source or target node not found
 2024-12-17 12:56:45.221 - Source or target node not found
 2024-12-17 12:56:45.221 - Source or target node not found
+2024-12-17 18:01:30.728 - Execution context closed (localhost 2, 2)
+2024-12-17 18:01:31.196 - Dispose navigator model
+2024-12-17 18:01:31.228 - DBeaver is stopping
+2024-12-17 18:01:31.233 - Stop instance server
+2024-12-17 18:01:32.241 - DBeaver shutdown completed
