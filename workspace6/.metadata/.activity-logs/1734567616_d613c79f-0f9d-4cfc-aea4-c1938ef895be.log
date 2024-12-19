@@ -1,0 +1,11 @@
+3364:APP_OPEN:startTime=1734567609897
+7575:GENERAL_SHOW_PERSPECTIVE:perspective=org.jkiss.dbeaver.core.perspective
+7576:GENERAL_VIEW_OPEN:view=org.jkiss.dbeaver.core.databaseNavigator
+7876:Open connection:driver=mysql:mysql8
+7954:SQL_EDITOR_OPEN:driver=mysql:mysql8
+5011137:ENTITY_EDITOR_OPEN:className=MySQLTable&driver=mysql:mysql8
+5013512:ENTITY_EDITOR_OPEN:className=MySQLTable&driver=mysql:mysql8
+5015770:DATA_EDIT_OPEN:objectType=MySQLTable
+10174302:ENTITY_EDITOR_OPEN:className=MySQLCatalog&driver=mysql:mysql8
+10183176:ENTITY_EDITOR_OPEN:className=MySQLTable&driver=mysql:mysql8
+10183244:DATA_EDIT_OPEN:objectType=MySQLTable
