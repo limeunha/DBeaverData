@@ -15213,3 +15213,123 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.ui 2 2 2024-12-31 09:35:44.610
 !MESSAGE Invalid preference category path: org.eclipse.debug.ui.ConsolePreferencePage (bundle: org.eclipse.ui.console, page: org.eclipse.ui.internal.console.ansi.preferences.AnsiConsolePreferencePage)
+!SESSION 2025-01-02 09:21:56.399 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko
+Framework arguments:  -eclipse.keyring C:\Users\EZENIC-038\AppData\Roaming\DBeaverData\secure\secure_storage
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 2 2 2025-01-02 09:22:02.436
+!MESSAGE Invalid preference category path: org.eclipse.debug.ui.ConsolePreferencePage (bundle: org.eclipse.ui.console, page: org.eclipse.ui.internal.console.ansi.preferences.AnsiConsolePreferencePage)
+
+!ENTRY org.eclipse.ui 4 0 2025-01-02 14:50:15.105
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.runtime.DBRProgressMonitor.subTask(String)" because "monitor" is null
+	at org.jkiss.dbeaver.erd.ui.layout.GraphLayoutAuto.layout(GraphLayoutAuto.java:63)
+	at org.jkiss.dbeaver.erd.ui.layout.DelegatingLayoutManager.layout(DelegatingLayoutManager.java:100)
+	at org.eclipse.draw2d.Figure.layout(Figure.java:1204)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:2063)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:2064)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:2064)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:2064)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:2064)
+	at org.eclipse.draw2d.FreeformViewport$FreeformViewportLayout.calculatePreferredSize(FreeformViewport.java:27)
+	at org.eclipse.draw2d.AbstractLayout.getPreferredSize(AbstractLayout.java:106)
+	at org.eclipse.draw2d.AbstractHintLayout.getPreferredSize(AbstractHintLayout.java:87)
+	at org.eclipse.draw2d.Figure.getPreferredSize(Figure.java:881)
+	at org.eclipse.draw2d.ScrollPaneSolver.solve(ScrollPaneSolver.java:77)
+	at org.eclipse.draw2d.FigureCanvas.layoutViewport(FigureCanvas.java:312)
+	at org.eclipse.draw2d.FigureCanvas$1.notifyValidating(FigureCanvas.java:271)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at org.eclipse.draw2d.UpdateManager.fireValidating(UpdateManager.java:124)
+	at org.eclipse.draw2d.DeferredUpdateManager.performValidation(DeferredUpdateManager.java:221)
+	at org.eclipse.draw2d.DeferredUpdateManager.performUpdate(DeferredUpdateManager.java:194)
+	at org.eclipse.draw2d.DeferredUpdateManager$UpdateRequest.run(DeferredUpdateManager.java:46)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4099)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.jkiss.dbeaver.ui.app.standalone.DBeaverApplication.start(DBeaverApplication.java:293)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.jkiss.dbeaver.launcher.DBeaverLauncher.invokeFramework(DBeaverLauncher.java:650)
+	at org.jkiss.dbeaver.launcher.DBeaverLauncher.basicRun(DBeaverLauncher.java:610)
+	at org.jkiss.dbeaver.launcher.DBeaverLauncher.run(DBeaverLauncher.java:1461)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2025-01-02 14:50:15.109
+!MESSAGE Event loop exception
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2025-01-02 14:50:15.109
+!MESSAGE Cannot invoke "org.jkiss.dbeaver.model.runtime.DBRProgressMonitor.subTask(String)" because "monitor" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.runtime.DBRProgressMonitor.subTask(String)" because "monitor" is null
+	at org.jkiss.dbeaver.erd.ui.layout.GraphLayoutAuto.layout(GraphLayoutAuto.java:63)
+	at org.jkiss.dbeaver.erd.ui.layout.DelegatingLayoutManager.layout(DelegatingLayoutManager.java:100)
+	at org.eclipse.draw2d.Figure.layout(Figure.java:1204)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:2063)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:2064)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:2064)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:2064)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:2064)
+	at org.eclipse.draw2d.FreeformViewport$FreeformViewportLayout.calculatePreferredSize(FreeformViewport.java:27)
+	at org.eclipse.draw2d.AbstractLayout.getPreferredSize(AbstractLayout.java:106)
+	at org.eclipse.draw2d.AbstractHintLayout.getPreferredSize(AbstractHintLayout.java:87)
+	at org.eclipse.draw2d.Figure.getPreferredSize(Figure.java:881)
+	at org.eclipse.draw2d.ScrollPaneSolver.solve(ScrollPaneSolver.java:77)
+	at org.eclipse.draw2d.FigureCanvas.layoutViewport(FigureCanvas.java:312)
+	at org.eclipse.draw2d.FigureCanvas$1.notifyValidating(FigureCanvas.java:271)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at org.eclipse.draw2d.UpdateManager.fireValidating(UpdateManager.java:124)
+	at org.eclipse.draw2d.DeferredUpdateManager.performValidation(DeferredUpdateManager.java:221)
+	at org.eclipse.draw2d.DeferredUpdateManager.performUpdate(DeferredUpdateManager.java:194)
+	at org.eclipse.draw2d.DeferredUpdateManager$UpdateRequest.run(DeferredUpdateManager.java:46)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4099)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.jkiss.dbeaver.ui.app.standalone.DBeaverApplication.start(DBeaverApplication.java:293)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.jkiss.dbeaver.launcher.DBeaverLauncher.invokeFramework(DBeaverLauncher.java:650)
+	at org.jkiss.dbeaver.launcher.DBeaverLauncher.basicRun(DBeaverLauncher.java:610)
+	at org.jkiss.dbeaver.launcher.DBeaverLauncher.run(DBeaverLauncher.java:1461)
