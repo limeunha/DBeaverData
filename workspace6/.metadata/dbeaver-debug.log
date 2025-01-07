@@ -1,12 +1,12 @@
-2025-01-06 17:38:18.517 - DBeaver 24.2.5.202411171748 is starting
-2025-01-06 17:38:18.518 - OS: Windows 10 10.0 (amd64)
-2025-01-06 17:38:18.518 - Java version: 17.0.6 by Eclipse Adoptium (64bit)
-2025-01-06 17:38:18.519 - Install path: 'C:\Users\EZENIC-038\AppData\Local\DBeaver'
-2025-01-06 17:38:18.519 - Instance path: 'file:/C:/Users/EZENIC-038/AppData/Roaming/DBeaverData/workspace6/'
-2025-01-06 17:38:18.520 - Memory available 64Mb/1024Mb
-2025-01-06 17:38:18.529 - Create display
-2025-01-06 17:38:18.672 - Starting instance server at http://localhost:54396
-2025-01-06 17:38:18.680 - Run workbench
+2025-01-07 09:30:51.928 - DBeaver 24.2.5.202411171748 is starting
+2025-01-07 09:30:51.929 - OS: Windows 10 10.0 (amd64)
+2025-01-07 09:30:51.929 - Java version: 17.0.6 by Eclipse Adoptium (64bit)
+2025-01-07 09:30:51.929 - Install path: 'C:\Users\EZENIC-038\AppData\Local\DBeaver'
+2025-01-07 09:30:51.930 - Instance path: 'file:/C:/Users/EZENIC-038/AppData/Roaming/DBeaverData/workspace6/'
+2025-01-07 09:30:51.931 - Memory available 64Mb/1024Mb
+2025-01-07 09:30:51.939 - Create display
+2025-01-07 09:30:52.080 - Starting instance server at http://localhost:49886
+2025-01-07 09:30:52.088 - Run workbench
 > Start Eclipse e4 Workbench SWT [org.eclipse.e4.ui.workbench.swt 0.17.500.v20240807-0911]
 > Start Eclipse Application Services [org.eclipse.e4.core.services 2.4.400.v20240413-1529]
 > Start Eclipse UI Application Services [org.eclipse.e4.ui.services 1.6.300.v20231201-1637]
@@ -21,24 +21,22 @@
 > Start Eclipse CSS SWT Support [org.eclipse.e4.ui.css.swt 0.15.400.v20240321-1245]
 > Start Default Text Editor [org.eclipse.ui.editors 3.18.0.v20240807-0735]
 > Start Text Editor Framework [org.eclipse.ui.workbench.texteditor 3.18.0.v20240819-1419]
-2025-01-06 17:38:20.156 - Configure workbench window
+2025-01-07 09:30:53.590 - Configure workbench window
 > Start DBeaver SQL Model [org.jkiss.dbeaver.model.sql 1.0.133.202411171748]
-2025-01-06 17:38:20.357 - Total database drivers: 120 (120)
+2025-01-07 09:30:53.756 - Total database drivers: 120 (120)
 > Start Help System Core [org.eclipse.help 3.10.400.v20240415-0528]
-2025-01-06 17:38:20.433 - Create actions
-2025-01-06 17:38:20.440 - Disable Eclipse action set 'org.eclipse.ui.edit.text.actionSet.annotationNavigation'
-2025-01-06 17:38:20.440 - Disable Eclipse action set 'org.eclipse.ui.WorkingSetActionSet'
-2025-01-06 17:38:20.441 - Disable Eclipse action set 'org.eclipse.ui.actionSet.openFiles'
-2025-01-06 17:38:20.441 - Create workbench actions
-2025-01-06 17:38:20.804 - Initialize workbench window
-2025-01-06 17:38:20.820 - Finish initialization
+2025-01-07 09:30:53.830 - Create actions
+2025-01-07 09:30:53.836 - Disable Eclipse action set 'org.eclipse.ui.edit.text.actionSet.annotationNavigation'
+2025-01-07 09:30:53.836 - Disable Eclipse action set 'org.eclipse.ui.WorkingSetActionSet'
+2025-01-07 09:30:53.837 - Disable Eclipse action set 'org.eclipse.ui.actionSet.openFiles'
+2025-01-07 09:30:53.837 - Create workbench actions
+2025-01-07 09:30:54.218 - Initialize workbench window
+2025-01-07 09:30:54.227 - Finish initialization
 > Start DBeaver UI Editors - Data [org.jkiss.dbeaver.ui.editors.data 1.0.143.202411171748]
-Warning: NLS unused message: actions_navigator__objects in: org.jkiss.dbeaver.ui.editors.sql.internal.SQLEditorMessages
-> Start DBeaver UI Editors - SQL [org.jkiss.dbeaver.ui.editors.sql 1.0.143.202411171748]
-> Start DBeaver SQL Terminal [org.jkiss.dbeaver.ui.editors.sql.terminal 1.0.119.202411171748]
-> Start Core Compare Support [org.eclipse.compare.core 3.8.500.v20240524-2010]
 > Start Internet Connection Management UI [org.eclipse.ui.net 1.5.400.v20240413-1529]
 > Start Internet Connection Management [org.eclipse.core.net 1.5.500.v20240625-1706]
+Warning: NLS unused message: actions_navigator__objects in: org.jkiss.dbeaver.ui.editors.sql.internal.SQLEditorMessages
+> Start DBeaver UI Editors - SQL [org.jkiss.dbeaver.ui.editors.sql 1.0.143.202411171748]
 > Start DBeaver Sample Database [org.jkiss.dbeaver.ext.sample.database 1.0.180.202411171748]
 > Start DBeaver Tip of the day [org.jkiss.dbeaver.ext.ui.tipoftheday 1.0.149.202411171748]
 > Start GEF Classic Draw2d [org.eclipse.draw2d 3.17.0.202409021815]
@@ -48,24 +46,38 @@ Warning: NLS unused message: actions_navigator__objects in: org.jkiss.dbeaver.ui
 > Start DBeaver Dashboard UI [org.jkiss.dbeaver.ui.dashboard 1.0.140.202411171748]
 > Start DBeaver JDBC Model [org.jkiss.dbeaver.model.jdbc 1.0.36.202411171748]
 > Start DBeaver Oracle Model [org.jkiss.dbeaver.ext.oracle 2.1.228.202411171748]
-> Start DBeaver UI Editors - Connections [org.jkiss.dbeaver.ui.editors.connection 1.0.134.202411171748]
+2025-01-07 09:30:55.524 - Connect with 'localhost 2' (mysql8-1939a18f57e-4f6b7c7b789d4747)
 > Start DBeaver MySQL Support [org.jkiss.dbeaver.ext.mysql 2.1.228.202411171748]
+2025-01-07 09:30:55.574 - Execution context opened (localhost 2; Main; 0)
+> Start DBeaver GIS Support [org.jkiss.dbeaver.data.gis 1.0.167.202411171748]
+2025-01-07 09:30:55.813 - Execution context opened (localhost 2; Metadata; 1)
+2025-01-07 09:30:55.913 - Connected (mysql8-1939a18f57e-4f6b7c7b789d4747, MySQL Connector/J [mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)])
+2025-01-07 09:30:58.021 - Open [https://dbeaver.io/product/version.xml]
+> Start DBeaver SQL Terminal [org.jkiss.dbeaver.ui.editors.sql.terminal 1.0.119.202411171748]
+> Start Core Compare Support [org.eclipse.compare.core 3.8.500.v20240524-2010]
 > Start Console [org.eclipse.ui.console 3.14.100.v20240429-1358]
 > Start Debug Core [org.eclipse.debug.core 3.21.500.v20240801-2219]
+2025-01-07 09:31:06.596 - Execution context opened (localhost 2; SQLEditor <Script-13.sql>; 2)
 > Start DBeaver Tasks - Native Tools UI [org.jkiss.dbeaver.tasks.native.ui 1.0.121.202411171748]
 > Start DBeaver MySQL UI Support [org.jkiss.dbeaver.ext.mysql.ui 1.0.135.202411171748]
 > Start DBeaver Tasks - General UI [org.jkiss.dbeaver.tasks.ui 1.0.121.202411171748]
-2025-01-06 17:38:23.224 - Connect with 'localhost 2' (mysql8-1939a18f57e-4f6b7c7b789d4747)
-2025-01-06 17:38:23.260 - Execution context opened (localhost 2; Main; 0)
-> Start DBeaver GIS Support [org.jkiss.dbeaver.data.gis 1.0.167.202411171748]
-2025-01-06 17:38:23.505 - Execution context opened (localhost 2; Metadata; 1)
-2025-01-06 17:38:23.573 - Connected (mysql8-1939a18f57e-4f6b7c7b789d4747, MySQL Connector/J [mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)])
-2025-01-06 17:38:23.575 - Execution context opened (localhost 2; SQLEditor <Script-14.sql>; 2)
 > Start DBeaver SQL Language Semantic Model [org.jkiss.dbeaver.model.lsm 1.0.38.202411171748]
-2025-01-06 17:38:39.726 - Execution context opened (localhost 2; SQLEditor <Script-13.sql>; 3)
-2025-01-06 18:14:45.688 - Execution context closed (localhost 2, 3)
-2025-01-06 18:14:45.730 - Execution context closed (localhost 2, 2)
-2025-01-06 18:14:46.041 - Dispose navigator model
-2025-01-06 18:14:46.088 - DBeaver is stopping
-2025-01-06 18:14:46.089 - Stop instance server
-2025-01-06 18:14:47.103 - DBeaver shutdown completed
+2025-01-07 09:31:09.554 - Execution context opened (localhost 2; SQLEditor <Script-14.sql>; 3)
+2025-01-07 14:17:48.612 - Execution context closed (localhost 2, 0)
+2025-01-07 14:17:48.623 - Execution context closed (localhost 2, 1)
+2025-01-07 14:17:48.634 - Execution context closed (localhost 2, 2)
+2025-01-07 14:17:48.645 - Execution context closed (localhost 2, 3)
+2025-01-07 14:17:48.645 - Disconnected (mysql8-1939a18f57e-4f6b7c7b789d4747)
+> Start DBeaver UI Editors - Connections [org.jkiss.dbeaver.ui.editors.connection 1.0.134.202411171748]
+2025-01-07 14:58:35.271 - Connect with 'localhost 2' (mysql8-1939a18f57e-4f6b7c7b789d4747)
+2025-01-07 14:58:35.273 - Execution context opened (localhost 2; Main; 4)
+2025-01-07 14:58:35.277 - Execution context opened (localhost 2; Metadata; 5)
+2025-01-07 14:58:35.301 - Connected (mysql8-1939a18f57e-4f6b7c7b789d4747, MySQL Connector/J [mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)])
+2025-01-07 14:58:35.314 - Execution context opened (localhost 2; SQLEditor <Script-13.sql>; 6)
+2025-01-07 14:58:35.331 - Execution context opened (localhost 2; SQLEditor <Script-14.sql>; 7)
+2025-01-07 17:48:13.225 - Execution context closed (localhost 2, 6)
+2025-01-07 17:48:13.272 - Execution context closed (localhost 2, 7)
+2025-01-07 17:48:13.587 - Dispose navigator model
+2025-01-07 17:48:13.634 - DBeaver is stopping
+2025-01-07 17:48:13.635 - Stop instance server
+2025-01-07 17:48:14.647 - DBeaver shutdown completed
